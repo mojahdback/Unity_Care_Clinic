@@ -23,6 +23,8 @@ $result = mysqli_query($conn, $sql);
         <th>Date of Birth</th>
         <th>Phone</th>
         <th>Email</th>
+        <th>Actions</th>
+
     </tr>
 
     <?php while ($row = mysqli_fetch_assoc($result)) { ?>
@@ -33,7 +35,15 @@ $result = mysqli_query($conn, $sql);
             <td><?php echo $row['date_of_birth']; ?></td>
             <td><?php echo $row['phone']; ?></td>
             <td><?php echo $row['email']; ?></td>
+            <td>
+                <a href="delete_patient.php?id=<?php echo $row['id']; ?>"
+                onclick="return confirm('Are you sure?')">
+                Delete
+                 </a>
+            </td>
         </tr>
+   
+
     <?php } ?>
 
 </table>

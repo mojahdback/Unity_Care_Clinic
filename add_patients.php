@@ -28,6 +28,9 @@
     <input type="email" name="email" required><br><br>
 
     <button type="submit">Save</button>
+    <br>
+    <a href="add_patients.php">Display</a>
+    
 
 </form>
 
