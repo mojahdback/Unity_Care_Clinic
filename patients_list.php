@@ -23,7 +23,7 @@ $result = mysqli_query($conn, $sql);
         <th>Date of Birth</th>
         <th>Phone</th>
         <th>Email</th>
-        <th>Actions</th>
+        <th>Actions </th>
 
     </tr>
 
@@ -40,6 +40,7 @@ $result = mysqli_query($conn, $sql);
                 onclick="return confirm('Are you sure?')">
                 Delete
                  </a>
+                 <a href="edit_patient.php?id=<?php echo $row['id']; ?>">Edit</a>
             </td>
         </tr>
    
