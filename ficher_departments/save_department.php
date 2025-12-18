@@ -1,5 +1,5 @@
 <?php
-include "config_db.php";
+include "../config_db.php";
 
 $name = $_POST['name'];
 

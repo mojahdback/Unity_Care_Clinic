@@ -1,0 +1,163 @@
+:root {
+  --primary: #2c7be5;
+  --bg: #f4f6f8;
+  --white: #ffffff;
+  --text: #333;
+  --radius: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  height: 100vh;
+  background: var(--primary);
+  color: white;
+  position: fixed;
+  padding: 25px 20px;
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 22px;
+}
+
+.sidebar a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  text-decoration: none;
+  padding: 12px;
+  border-radius: var(--radius);
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.sidebar a:hover {
+  background: rgba(255,255,255,.2);
+}
+
+/* Main */
+.main {
+  margin-left: 260px;
+  padding: 30px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--white);
+  padding: 25px;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 10px rgba(0,0,0,.08);
+}
+
+.card h3 {
+  font-size: 14px;
+  color: #777;
+}
+
+.card p {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+  color: var(--primary);
+}
+
+/* Section */
+.section {
+  margin-top: 40px;
+  background: var(--white);
+  padding: 25px;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 10px rgba(0,0,0,.08);
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+th, td {
+  padding: 14px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+th {
+  background: #f0f3f7;
+  font-size: 14px;
+}
+
+tr:hover {
+  background: #f9fbff;
+}
+
+/* Buttons */
+.btn {
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.btn-add {
+  background: var(--primary);
+  color: white;
+}
+
+.btn-edit {
+  background: #f4b400;
+  color: white;
+}
+
+.btn-delete {
+  background: #e5533d;
+  color: white;
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+}

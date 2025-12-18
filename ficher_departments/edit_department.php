@@ -1,5 +1,5 @@
 <?php
-include "config_db.php";
+include "../config_db.php";
 
 $id = $_GET['id'];
 $result = mysqli_query($conn, "SELECT * FROM departments WHERE id = $id");

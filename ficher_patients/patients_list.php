@@ -1,5 +1,5 @@
 <?php
-include "config_db.php";
+include "../config_db.php";
 
 $sql = "SELECT * FROM patients";
 $result = mysqli_query($conn, $sql);
@@ -10,11 +10,26 @@ $result = mysqli_query($conn, $sql);
 <head>
     <meta charset="UTF-8">
     <title>Patients List</title>
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
+ 
+<div class="sidebar">
+  <h2>Unity Care</h2>
+  <a href="../dashbord.php">📊 Dashboard</a>
+  <a href="ficher_patients/patients_list.php">🧑‍🤝‍🧑 Patients</a>
+  <a href="ficher_doctors/doctors_list.php">👨‍⚕️ Doctors</a>
+  <a href="ficher_departments/departments_list.php">🏥 Departments</a>
+  <a href="#">⚙️ Settings</a>
+ </div>
 
-<h2>Patients List</h2>
 
+<div class="tables">
+
+    <h2>Patients List</h2>
+<a href="add_patients.php">➕ Add Department</a>
+<br>
 <table border="1" cellpadding="10">
     <tr>
         <th>ID</th>
@@ -48,6 +63,13 @@ $result = mysqli_query($conn, $sql);
     <?php } ?>
 
 </table>
+
+    
+</div>
+
+
+ </div>
+ 
 
 </body>
 </html>

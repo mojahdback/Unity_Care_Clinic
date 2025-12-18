@@ -1,5 +1,5 @@
 <?php
-include "config_db.php";
+include "../config_db.php";
 $departments = mysqli_query($conn, "SELECT * FROM departments");
 ?>
 
@@ -18,10 +18,10 @@ $departments = mysqli_query($conn, "SELECT * FROM departments");
     <input type="text" name="full_name" required><br><br>
 
     <label>Specialty:</label><br>
-    <input type="text" name="specialty" required><br><br>
+    <input type="text" name="specialty" ><br><br>
 
     <label>Department:</label><br>
-    <select name="department_id" required>
+    <select name="department_id" >
         <option value="">-- Select Department --</option>
         <?php while($d = mysqli_fetch_assoc($departments)) { ?>
             <option value="<?php echo $d['id']; ?>">
