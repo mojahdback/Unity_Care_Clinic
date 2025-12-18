@@ -111,7 +111,7 @@ $total_departments = mysqli_fetch_assoc($departments)['total'];
     <a href="dashbord.html">Dashboard</a>
     <a href="patients_list.php">Patients</a>
     <a href="#">Doctors</a>
-    <a href="#">Departments</a>
+    <a href="departments_list.php">Departments</a>
     <a href="#">Settings</a>
   </div>
 

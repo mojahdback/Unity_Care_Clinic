@@ -12,6 +12,8 @@ $result = mysqli_query($conn, "SELECT * FROM departments");
 
 <h2>Departments</h2>
 <a href="add_department.php">➕ Add Department</a>
+<br>
+
 
 <table border="1" cellpadding="10">
     <tr>
