@@ -1,3 +1,18 @@
+<?php
+include "config_db.php";
+
+$patients = mysqli_query($conn, "SELECT COUNT(*) AS total FROM patients");
+$total_patients = mysqli_fetch_assoc($patients)['total'];
+
+
+$doctors = mysqli_query($conn, "SELECT COUNT(*) AS total FROM doctors");
+$total_doctors = mysqli_fetch_assoc($doctors)['total'];
+
+
+$departments = mysqli_query($conn, "SELECT COUNT(*) AS total FROM departments");
+$total_departments = mysqli_fetch_assoc($departments)['total'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -93,8 +108,8 @@
 
   <div class="sidebar">
     <h2>Unity Care</h2>
-    <a href="#">Dashboard</a>
-    <a href="#">Patients</a>
+    <a href="dashbord.html">Dashboard</a>
+    <a href="patients_list.php">Patients</a>
     <a href="#">Doctors</a>
     <a href="#">Departments</a>
     <a href="#">Settings</a>
@@ -109,7 +124,8 @@
     <div class="cards">
       <div class="card">
         <h3>Total Patients</h3>
-        <p>1245</p>
+        <p><?php echo $total_patients; ?></p>
+
       </div>
       <div class="card">
         <h3>Total Doctors</h3>
