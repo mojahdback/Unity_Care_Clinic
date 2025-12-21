@@ -12,7 +12,7 @@ $result = mysqli_query($conn, $sql);
 <html>
 <head>
     <title>Doctors</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 
 </head>
 <body>
@@ -20,15 +20,19 @@ $result = mysqli_query($conn, $sql);
 <div class="sidebar">
   <h2>Unity Care</h2>
   <a href="../dashbord.php">📊 Dashboard</a>
-  <a href="ficher_patients/patients_list.php">🧑‍🤝‍🧑 Patients</a>
-  <a href="ficher_doctors/doctors_list.php">👨‍⚕️ Doctors</a>
-  <a href="ficher_departments/departments_list.php">🏥 Departments</a>
+  <a href="../ficher_patients/patients_list.php">🧑‍🤝‍🧑 Patients</a>
+  <a href="../ficher_doctors/doctors_list.php">👨‍⚕️ Doctors</a>
+  <a href="../ficher_departments/departments_list.php">🏥 Departments</a>
   <a href="#">⚙️ Settings</a>
  </div>
 
-
-<h2>Doctors</h2>
-<a href="add_doctor.php">➕ Add Doctor</a>
+<div  class ="main">
+   
+        <div class="header">
+            <h1>Doctors</h1>
+            <a href="add_doctor.php">➕ Add Doctor</a>
+            <br>
+        </div>
 
 <table border="1" cellpadding="10">
     <tr>
@@ -60,6 +64,8 @@ $result = mysqli_query($conn, $sql);
     <?php } ?>
 
 </table>
+
+</div>
 
 </body>
 </html>

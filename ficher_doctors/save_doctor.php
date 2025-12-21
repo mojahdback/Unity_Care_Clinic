@@ -14,3 +14,4 @@ mysqli_query($conn, $sql);
 
 header("Location: doctors_list.php");
 exit;
+

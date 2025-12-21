@@ -13,12 +13,27 @@ $departments = mysqli_query($conn, "SELECT * FROM departments");
 <html>
 <head>
     <title>Edit Doctor</title>
+    <link rel="stylesheet" href="../css/style.css">
+
 </head>
 <body>
 
-<h2>Edit Doctor</h2>
+ <div class="sidebar">
+  <h2>Unity Care</h2>
+  <a href="../dashbord.php"> 📊 Dashboard</a>
+  <a href="../ficher_patients/patients_list.php">🧑‍🤝‍🧑 Patients</a>
+  <a href="../ficher_doctors/doctors_list.php">👨‍⚕️ Doctors</a>
+  <a href="../ficher_departments/departments_list.php">🏥 Departments</a>
+  <a href="#">⚙️ Settings</a>
+ </div>
 
-<form action="update_doctor.php" method="POST">
+<div class="main">
+    <div class="header">
+        <h1>Edit Doctor</h1>
+    </div>
+
+
+    <form action="update_doctor.php" method="POST">
     <input type="hidden" name="id" value="<?php echo $doctor['id']; ?>">
 
     <label>Full Name:</label><br>
@@ -45,6 +60,11 @@ $departments = mysqli_query($conn, "SELECT * FROM departments");
 
     <button type="submit">Update</button>
 </form>
+
+
+
+</div>
+
 
 </body>
 </html>

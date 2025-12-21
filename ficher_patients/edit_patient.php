@@ -13,12 +13,27 @@ $patient = mysqli_fetch_assoc($result);
 <head>
     <meta charset="UTF-8">
     <title>Edit Patient</title>
+    <link rel="stylesheet" href="../css/style.css">
+
 </head>
 <body>
 
-<h2>Edit Patient</h2>
+<div class="sidebar">
+  <h2>Unity Care</h2>
+  <a href="../dashbord.php">📊 Dashboard</a>
+  <a href="../ficher_patients/patients_list.php">🧑‍🤝‍🧑 Patients</a>
+  <a href="../ficher_doctors/doctors_list.php">👨‍⚕️ Doctors</a>
+  <a href="../ficher_departments/departments_list.php">🏥 Departments</a>
+  <a href="#">⚙️ Settings</a>
+ </div>
 
-<form action="update_patient.php" method="POST">
+
+<div class="main">
+    <div class="header">
+      <h1>Edit Patient</h1>
+    </div>
+
+    <form action="update_patient.php" method="POST">
     <input type="hidden" name="id" value="<?php echo $patient['id']; ?>">
 
     <label>Full Name:</label><br>
@@ -38,6 +53,12 @@ $patient = mysqli_fetch_assoc($result);
 
     <button type="submit">Update</button>
 </form>
+
+</div>
+
+
+
+
 
 </body>
 </html>

@@ -7,24 +7,27 @@ $result = mysqli_query($conn, "SELECT * FROM departments");
 <html>
 <head>
     <title>Departments</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 
 </head>
 <body>
 
  <div class="sidebar">
   <h2>Unity Care</h2>
-  <a href="../dashbord.php">📊 Dashboard</a>
-  <a href="ficher_patients/patients_list.php">🧑‍🤝‍🧑 Patients</a>
-  <a href="ficher_doctors/doctors_list.php">👨‍⚕️ Doctors</a>
-  <a href="ficher_departments/departments_list.php">🏥 Departments</a>
+  <a href="../dashbord.php"> 📊 Dashboard</a>
+  <a href="../ficher_patients/patients_list.php">🧑‍🤝‍🧑 Patients</a>
+  <a href="../ficher_doctors/doctors_list.php">👨‍⚕️ Doctors</a>
+  <a href="../ficher_departments/departments_list.php">🏥 Departments</a>
   <a href="#">⚙️ Settings</a>
  </div>
 
-<h2>Departments</h2>
-<a href="add_department.php">➕ Add Department</a>
-<br>
+<div class="main">
 
+       <div class="header">
+            <h1>Departments</h1>
+             <a href="add_department.php">➕ Add Department</a>
+            <br>
+        </div>
 
 <table border="1" cellpadding="10">
     <tr>
@@ -47,6 +50,8 @@ $result = mysqli_query($conn, "SELECT * FROM departments");
         </tr>
     <?php } ?>
 </table>
+
+    </div>
 
 </body>
 </html>

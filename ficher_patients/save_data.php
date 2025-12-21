@@ -13,9 +13,10 @@ $sql = "INSERT INTO patients
 (full_name, gender, date_of_birth, phone, email)
 VALUES ('$full_name', '$gender', '$date_of_birth', '$phone', '$email')";
 
-if (mysqli_query($conn, $sql)) {
-    echo "Patient added successfully!";
-} else {
-    echo "Error: " . mysqli_error($conn);
-}
-?>
+
+mysqli_query($conn, $sql);
+
+header("Location: patients_list.php");
+
+exit;
+
